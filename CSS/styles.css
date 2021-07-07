@@ -228,25 +228,24 @@ img {
 /* =====================END HERO====================
 /*=====================ABOUT======================*/
 .about-paragraph {
-  font-family: var(--font-family);
+  font-family: var(--main-font);
   font-size: var(--paragraph-menu-font-size);
+  font-weight: bold;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-bottom: 10px;
-
-  color: var(--back-text-color);
+  margin-bottom: 10px;
+  color: var(--text-color);
 }
 
 .description {
-  font-family: var(--font-family);
+  font-family: var(--main-font);
   font-size: var(--paragraph-menu-font-size);
   line-height: 1.71;
   /* or 171% */
-
   letter-spacing: 0.03em;
 
-  color: var(--grey-text-color);
+  color: var(--gray-type);
 }
 .about-container {
   width: 1200px;
@@ -291,8 +290,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 94px;
-  margin-bottom: 94px;
 }
 
 .whatwedo-list {
@@ -303,7 +300,7 @@ img {
 }
 .whatwedo-img {
   flex-basis: calc((100% - 3 * var(--margin)) / 3);
-  margin-top: var(--margin);
+  margin-top: 50px;
   margin-left: var(--margin);
 }
 /*=================END  What we do ==============*/
@@ -371,7 +368,6 @@ img {
 /*=====================Footer=====================*/
 .address {
   font-family: var(--font-family);
-  font-style: normal;
   font-size: var(--paragraph-menu-font-size);
   line-height: 1.71;
   /* or 171% */
@@ -381,9 +377,13 @@ img {
 .address-footer {
   padding-bottom: 9px;
 }
-.mail-link-footer {
-  padding-bottom: 9px;
-  font-style: normal;
+.mail-link,
+.tel-link {
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin-right: auto;
 }
 .footer {
   background: var(--hero-footer);
@@ -392,6 +392,15 @@ img {
 }
 .logo-white {
   color: var(--back-color);
+}
+
+.cont-link {
+  text-align: left;
+  color: var(--contact-footer);
+}
+.cont-link:hover,
+.cont-link:focus {
+  color: var(--accent-color);
 }
 /*========END FOOTER ==========*/
 /*========PORTFOLIO===========*/
