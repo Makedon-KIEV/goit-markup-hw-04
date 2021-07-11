@@ -20,6 +20,7 @@
   --margin: 30px;
   --background-hero: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
   --social-links-bg-f: rgba(255, 255, 255, 0.1);
+  --social-background: #afb1b8;
 }
 
 h1,
@@ -164,9 +165,7 @@ li {
 .cont-link-map {
   color: var(--accent-color);
 }
-.social-link-list {
-  justify-content: center;
-}
+
 /*=====================HERO=======================*/
 
 .hero {
@@ -267,6 +266,21 @@ li {
 }
 .about-flex-element {
   width: 270px;
+}
+/* ============== About icons================= */
+.about-cards-icon {
+  background: #f5f4fa;
+  height: 70px;
+  color: var(--text-color);
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--widgets-link-background-color);
+  margin-bottom: var(--margin);
 }
 /*=====================END ABOUT======================*/
 /*===================== What we do ==============*/
@@ -386,7 +400,7 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: var(--title-text-color);
+  background-color: var(--social-links-bg-f);
 }
 .social-link:hover,
 .social-link:focus {
@@ -394,15 +408,60 @@ li {
 }
 .social-link:hover .social-link-icon,
 .social-link:focus .social-link-icon {
-  fill: var(--title-text-color);
+  color: var(--title-text-color);
 }
 .social-link-icon {
   width: 20px;
   height: 20px;
   fill: var(--social-links);
 }
+.social-link-list {
+  justify-content: center;
+}
+.social-link-icon {
+  color: var(--social-background);
+}
 
 /*===================END Team=====================*/
+
+/* =====================Regular customers============= */
+
+.regular-customer {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.customer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.customer-list-items {
+  display: block;
+  text-align: center;
+}
+.customer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--social-links-bg-f);
+  border-radius: 4px;
+}
+.customer-links-icons {
+}
+.customer-links:hover,
+.customer-links:focus {
+  fill: var(--accent-color);
+}
+.customer-links:hover .custumer-links-icons,
+.customer-links:focus .custumer-links-icons {
+  fill: var(--accent-color);
+}
 /*=====================Footer=====================*/
 .address {
   font-family: var(--font-family);
@@ -440,6 +499,20 @@ li {
 .cont-link:hover,
 .cont-link:focus {
   color: var(--accent-color);
+}
+.footer-conteiner {
+  display: flex;
+  align-items: baseline;
+}
+.connect {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--back-color);
 }
 /*========END FOOTER ==========*/
 /*========PORTFOLIO===========*/
