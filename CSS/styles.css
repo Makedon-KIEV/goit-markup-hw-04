@@ -460,6 +460,9 @@ svg {
 .customer-list-items {
   display: block;
   text-align: center;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 .customer-links {
   display: flex;
@@ -467,7 +470,7 @@ svg {
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid var(--social-links-bg-f);
+
   border-radius: 4px;
   fill: #afb1b8;
 }
