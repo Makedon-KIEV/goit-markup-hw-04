@@ -60,10 +60,10 @@ img {
   display: block;
   max-width: 100%;
 }
-li {
+/* li {
   outline: 1px solid tomato;
 }
-
+ */
 /* ======= COMPONENTS ======== */
 .section {
   padding-top: 94px;
@@ -152,6 +152,10 @@ li {
 .menu-item-link:focus {
   color: var(--accent-color);
 }
+.menu-item-link:hover .menu-icons,
+.menu-item-link:focus .menu-icons {
+  color: var(--accent-color);
+}
 .menu-item-link.current {
   color: var(--accent-color);
 }
@@ -164,6 +168,9 @@ li {
 .cont-link:focus,
 .cont-link-map {
   color: var(--accent-color);
+}
+.menu-icons {
+  fill: var(--gray-type);
 }
 
 /*=====================HERO=======================*/
@@ -245,9 +252,7 @@ li {
   font-family: var(--main-font);
   font-size: var(--paragraph-menu-font-size);
   line-height: 1.71;
-  /* or 171% */
   letter-spacing: 0.03em;
-
   color: var(--gray-type);
 }
 .about-container {
@@ -405,15 +410,16 @@ li {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
+  fill: #ffffff;
 }
 .social-link:hover .social-link-icon,
 .social-link:focus .social-link-icon {
-  color: var(--title-text-color);
+  fill: var(--title-text-color);
 }
 .social-link-icon {
   width: 20px;
   height: 20px;
-  fill: var(--social-links);
+  fill: #afb1b8;
 }
 .social-link-list {
   justify-content: center;
@@ -432,12 +438,16 @@ li {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  padding-bottom: 50px;
+  /*   padding-top: 94px; */
+  color: var(--text-color);
 }
 
 .customer-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  /*  padding-bottom: 94px; */
 }
 .customer-list-items {
   display: block;
@@ -451,6 +461,7 @@ li {
   height: 92px;
   border: 1px solid var(--social-links-bg-f);
   border-radius: 4px;
+  fill: #afb1b8;
 }
 .customer-links-icons {
 }
@@ -514,6 +525,21 @@ li {
   text-transform: uppercase;
   color: var(--back-color);
 }
+.footer-conteiner-social .connect {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+.footer-conteiner-social {
+  padding-left: 70px;
+}
+
 /*========END FOOTER ==========*/
 /*========PORTFOLIO===========*/
 .gallery-portfolio {
