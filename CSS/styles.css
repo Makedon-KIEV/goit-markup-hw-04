@@ -501,12 +501,19 @@ svg {
   letter-spacing: 0.03em;
   color: var(--back-color);
 }
+.footer-menu {
+  display: block;
+  margin-bottom: 9px;
+}
 .address-footer {
   /*  padding-bottom: 9px; */
   font-style: normal;
 }
 .footer-conteiner-con,
 .adress-title:not(:last-child) {
+}
+.footer-menu-list {
+  display: block;
   margin-bottom: 9px;
 }
 .adress-title {
@@ -543,6 +550,8 @@ svg {
   align-items: baseline;
 }
 .footer-conteiner-con {
+  display: block;
+  margin-bottom: 9px;
   margin-right: 70px;
 }
 
