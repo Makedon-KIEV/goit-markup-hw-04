@@ -21,6 +21,12 @@
   --background-hero: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
   --social-links-bg-f: rgba(255, 255, 255, 0.1);
   --social-background: #afb1b8;
+  --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --porfolio-nav-link-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --portfolio-flex-element-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 h1,
@@ -162,7 +168,7 @@ svg {
 }
 .menu-item-link:hover .menu-icons,
 .menu-item-link:focus .menu-icons {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .menu-item-link.current {
   color: var(--accent-color);
@@ -178,7 +184,7 @@ svg {
   color: var(--accent-color);
 }
 .menu-icons {
-  fill: var(--gray-type);
+  margin-right: 10px;
 }
 
 /*=====================HERO=======================*/
@@ -215,6 +221,7 @@ svg {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--back-color);
+  margin-bottom: 30px;
 }
 
 .hero-button {
@@ -316,7 +323,7 @@ svg {
   margin-bottom: 50px;
 }
 .container-whatwedo {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -326,6 +333,7 @@ svg {
 .whatwedo-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: calc(-1 * var(--margin));
   margin-left: calc(-1 * var(--margin));
 }
@@ -439,50 +447,50 @@ svg {
 /*===================END Team=====================*/
 
 /* =====================Regular customers============= */
-
-.regular-customer {
+.our-team-list {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-bottom: 50px;
-  /*   padding-top: 94px; */
-  color: var(--text-color);
+}
+.our-team-list {
+  margin-bottom: 50px;
+}
+.client-list {
+  display: flex;
+  margin-top: calc(-1 * var(--margin));
+  margin-left: calc(-1 * var(--margin));
 }
 
-.customer-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /*  padding-bottom: 94px; */
+.client-list-items {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-top: var(--margin);
+  margin-left: var(--margin);
 }
-.customer-list-items {
-  display: block;
-  text-align: center;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-.customer-links {
+
+.client-link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
-  fill: #afb1b8;
+  border: 1px solid var(--social-links-bg-f);
+  border-radius: 4px;
 }
 
-.customer-links:hover,
-.customer-links:focus {
-  fill: var(--accent-color);
+.client-link-icons {
+  fill: var(--social-background);
 }
-.customer-links:hover .custumer-links-icons,
-.customer-links:focus .custumer-links-icons {
-  fill: var(--accent-color);
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
 }
-.customer-list-items:hover,
-.customer-list-items:focus {
+
+.client-link:hover .client-link-icons,
+.client-link:focus .client-link-icons {
   fill: var(--accent-color);
 }
 /*=====================Footer=====================*/
@@ -490,13 +498,20 @@ svg {
   font-family: var(--font-family);
   font-size: var(--paragraph-menu-font-size);
   line-height: 1.71;
-  /* or 171% */
   letter-spacing: 0.03em;
   color: var(--back-color);
 }
 .address-footer {
-  padding-bottom: 9px;
+  /*  padding-bottom: 9px; */
   font-style: normal;
+}
+.footer-conteiner-con,
+.adress-title:not(:last-child) {
+  margin-bottom: 9px;
+}
+.adress-title {
+  font-style: inherit;
+  margin-top: 20px;
 }
 .mail-link,
 .tel-link {
@@ -527,6 +542,10 @@ svg {
   display: flex;
   align-items: baseline;
 }
+.footer-conteiner-con {
+  margin-right: 70px;
+}
+
 .connect {
   font-family: var(--main-font);
   font-style: normal;
@@ -546,10 +565,7 @@ svg {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  padding-bottom: 20px;
-}
-.footer-conteiner-social {
-  padding-left: 70px;
+  margin-bottom: 20px;
 }
 
 /*========END FOOTER ==========*/
@@ -603,6 +619,7 @@ svg {
 .nav-button:focus {
   background-color: var(--accent-color);
   color: var(--back-color);
+  box-shadow: var(--porfolio-nav-link-shadow);
   cursor: pointer;
 }
 
@@ -624,6 +641,10 @@ svg {
 .projects-links,
 .projects-links:visited {
   color: var(--text-color);
+}
+.projects-blocks:hover,
+.projects-blocks:focus {
+  box-shadow: var(--portfolio-flex-element-shadow);
 }
 .projects-blocks {
   flex-basis: calc(100% / 3 - var(--margin));
